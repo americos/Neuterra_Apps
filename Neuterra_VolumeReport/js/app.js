@@ -1,8 +1,5 @@
 Neuterra.VolumeReport = function( app ) {
-	jQuery( app.rootElement ).find( '.helloString' ).html(
-		app.getPropertyValue( 'helloString' )
-	)
-		
+
  	Ext.require([
 	    'Ext.form.*',
 	    'Ext.data.*',
@@ -23,6 +20,7 @@ Neuterra.VolumeReport = function( app ) {
 	        form = false,
 	        rec = false,
 	        selectedStoreItem = false,
+	
 	        //performs the highlight of an item in the bar series
 	        selectItem = function(storeItem) {
 	            var name = storeItem.get('company'),
@@ -75,35 +73,35 @@ Neuterra.VolumeReport = function( app ) {
 
 	    // sample static data for the store
 	    var myData = [
-	        ['3m Co'],
-	        ['Alcoa Inc'],
-	        ['Altria Group Inc'],
-	        ['American Express Company'],
-	        ['American International Group, Inc.'],
-	        ['AT&T Inc'],
-	        ['Boeing Co.'],
-	        ['Caterpillar Inc.'],
-	        ['Citigroup, Inc.'],
-	        ['E.I. du Pont de Nemours and Company'],
-	        ['Exxon Mobil Corp'],
-	        ['General Electric Company'],
-	        ['General Motors Corporation'],
-	        ['Hewlett-Packard Co'],
-	        ['Honeywell Intl Inc'],
-	        ['Intel Corporation'],
-	        ['International Business Machines'],
-	        ['Johnson & Johnson'],
-	        ['JP Morgan & Chase & Co'],
-	        ['McDonald\'s Corporation'],
-	        ['Merck & Co., Inc.'],
-	        ['Microsoft Corporation'],
-	        ['Pfizer Inc'],
-	        ['The Coca-Cola Company'],
-	        ['The Home Depot, Inc.'],
-	        ['The Procter & Gamble Company'],
-	        ['United Technologies Corporation'],
-	        ['Verizon Communications'],
-	        ['Wal-Mart Stores, Inc.']
+	        ['PETTY CASH'],
+	        ['CHECKING - FNB SOUTHWEST'],
+	        ['FACILITY DIRECTORS FUND'],
+	        ['ACCOUNT RECEIVABLE  -  REVENUE'],
+	        ['ACCOUNT RECEIVABLE  -  OTHER'],
+	        ['ALLOWANCE - BAD DEBTS'],
+	        ['INVENTORY - MEDICAL'],
+	        ['INVENTORY - IMPLANTS'],
+	        ['INVENTORY - PHARMACY'],
+	        ['PREPAID - INSURANCE'],
+	        ['PREPAID - RENT'],
+	        ['PREPAID - MAINTENANCE'],
+	        ['PREPAID - OTHER'],
+	        ['FIXED ASSETS - MEDICAL EQUIPMENT'],
+	        ['FIXED ASSETS - MOVEABLE MEDICAL EQUIPMENT'],
+	        ['FIXED ASSETS - MEDICAL INSTRUMENTS'],
+	        ['FIXED ASSETS - OFFICE EQUIPMENT'],
+	        ['LEASEHOLD IMPROVEMENTS'],
+	        ['ACCUM DEPREC - FIXED MEDICAL'],
+	        ['ACCUM DEPREC - MOVEABLE MEDICAL'],
+	        ['PAYABLES DISCOUNT - AVAILABLE'],
+	        ['ACCRUED PAYROLL EXPENSES'],
+	        ['CURRENT PORTION LTD'],
+	        ['MEMBER CONTRIBUTIONS'],
+	        ['MEMBER DISTRIBUTIONS'],
+	        ['CAPITAL ACCOUNT ADJUSTMENTS'],
+	        ['RETAINED EARNINGS'],
+	        ['REVENUE - ANESTHESIOLOGY'],
+	        ['UNIT-ANESTHESIOLOGY PROCEDURES']
 	    ];
 
 	    for (var i = 0, l = myData.length, rand = Math.random; i < l; i++) {
@@ -187,7 +185,7 @@ Neuterra.VolumeReport = function( app ) {
 	        id: 'company-form',
 	        flex: 0.60,
 	        store: ds,
-	        title:'Company Data',
+	        title:'Volume Data',
 
 	        columns: [
 	            {
@@ -339,10 +337,10 @@ Neuterra.VolumeReport = function( app ) {
 	     * Here is where we create the Form
 	     */
 	    var gridForm = Ext.create('Ext.form.Panel', {
-	        title: 'Company data',
+	        title: 'Neuterra - Volume Report',
 	        frame: true,
 	        bodyPadding: 5,
-	        width: 870,
+	        width: 970,
 	        height: 720,
 
 	        fieldDefaults: {
@@ -369,19 +367,21 @@ Neuterra.VolumeReport = function( app ) {
 	            border: false,
 	            bodyStyle: 'background-color: transparent',
 
-	            items: [gridPanel, {
-	                flex: 0.4,
-	                layout: {
-	                    type: 'vbox',
-	                    align:'stretch'
-	                },
+	            items: [
+					gridPanel, 
+					{
+	                	flex: 0.4,
+	                	layout: {
+	                    	type: 'vbox',
+	                    	align:'stretch'
+	                	},
 	                margin: '0 0 0 5',
-	                title: 'Company Details',
+	                title: 'Details Section',
 	                items: [{
 	                    margin: '5',
 	                    xtype: 'fieldset',
 	                    flex: 1,
-	                    title:'Company details',
+	                    title:'Account details',
 	                    defaults: {
 	                        width: 240,
 	                        labelWidth: 90
