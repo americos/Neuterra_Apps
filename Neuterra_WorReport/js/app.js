@@ -1,4 +1,4 @@
-Sample.Hello = function( app ) {
+Neuterra.WorReport = function( app ) {
 	window.chart = new Highcharts.StockChart({
 	    chart: {
 	        renderTo: 'container'

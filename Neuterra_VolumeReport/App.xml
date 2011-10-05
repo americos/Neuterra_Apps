@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<app draggable="false" height="" id="test_highstock" jsclass="Neuterra.WorReport"
+<app draggable="false" height="200" id="Neuterra_VolumeReport"
+     jsclass="Neuterra.VolumeReport"
      minimizable="false"
-     name="Neuterra_WorReport"
-     width="">
+     name="Neuterra_VolumeReport"
+     width="200">
 	  <title>Hello World</title>
-	  <description/>
+	  <description>Netuerra App for VolumeReport</description>
 
 	  <properties>
 		    <property datatype="string" defaultvalue="Techies !" label="Hello String"
@@ -16,14 +17,10 @@
 	  </properties>
 
 	  <requires>
-			<require src="js/jquery164.js" type="script"/>
-			<require src="js/highstock.js" type="script"/>
-			<require src="js/exporting.js" type="script"/>
-			<require src="js/usdeur.js" type="script"/>
-			
-			
 		    <require src="js/app.js" type="script"/>
 		    <require src="css/app.css" type="css"/>
 		    <require src="html/app.html" type="html"/>
+		
+			<require type='library' name='ext4' version='4.0.2' />
 	  </requires>
 </app>
