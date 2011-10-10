@@ -109,10 +109,10 @@ Sample.Hello = function( app ) {
 	    var grid = Ext.create('Ext.grid.Panel', {
 	        renderTo: Ext.getBody(),
 	        collapsible: true,
-	        iconCls: 'icon-grid',
+	        //conCls: 'icon-grid',
 	        frame: true,
 	        store: Payors,
-	        width: 600,
+	        width: 900,
 	        height: 400,
 	        title: 'Payors by Specialty',
 	        features: [groupingFeature],
